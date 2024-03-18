@@ -1,0 +1,15 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+    grid-template-rows: repeat(6, auto); /* 6 rows that adjust to content size */
+    /* gap: 10px; */
+    padding: 10px; /* Padding around the grid container */
+    background-color: blue;
+}
+
+.grid-item {
+    background-color: #3cbf59; /* Light grey background for the grid items */
+    border: 1px solid #ddd; /* Light border for the grid items */
+    padding: 20px; /* Padding inside each grid item */
+    text-align: center; /* Center the text inside each grid item */
+}

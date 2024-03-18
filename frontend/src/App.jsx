@@ -7,17 +7,18 @@ import DogInfo from './components/DogInfo/DogInfo'
 import NavBar from './components/Navbar/NavBar'
 import PostPicture from './components/PostPicture/PostPicture'
 import User from './components/User/User'
+import Card2 from './components/Card/Card2'
 
 function App() {
 
   return (
     <>
-    {/* <Auth/>
+    {/* <Auth/> */}
     <Card/>
-    <UserChat/>
-    <UserList/>
-    <DogInfo/> */}
-    <NavBar/>
+    {/* <UserChat/> */}
+    {/* <UserList/> */}
+    {/* <DogInfo/> */}
+    {/* <NavBar/> */}
     {/* <PostPicture/>
     <User/> */}
     </>
