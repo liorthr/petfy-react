@@ -1,0 +1,69 @@
+ .navbar {
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #FF6C00;
+    height: 60px; 
+    z-index: 1000; 
+}
+
+.navbar-logo img {
+    height: 50px; 
+}
+
+.navbar-icons a {
+    margin-right: 40px;
+    color: #ffffff; 
+}
+
+.navbar-icons a:hover svg { /* Cibler les éléments SVG des icônes FontAwesome spécifiquement */
+    color: #FFD43B;
+}
+
+.navbar-icons a:last-child {
+    margin-right: 30;
+}
+
+/* Existing styles... */
+
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+}
+
+/* Styles for screen sizes smaller than 600px */
+@media (max-width: 600px) {
+    .navbar-icons {
+        display: none; 
+        flex-direction: column;
+        align-items: center; 
+        position: absolute; 
+        top: 70px; 
+        right: 0;
+        background-color: #FF6C00; 
+        width: 100%; 
+    }
+
+    .navbar-icons.show {
+        display: flex; 
+    }
+
+    .menu-icon {
+        display: block; 
+        margin-right: 30px;
+    }
+
+    .navbar-icons a {
+        margin-right: 20; 
+        margin-top: 10px; 
+    }
+
+    .navbar-icons a:last-child {
+        margin-bottom: 10px; 
+    }
+}
