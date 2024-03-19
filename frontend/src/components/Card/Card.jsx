@@ -8,6 +8,7 @@ import { AlertDemo } from '../Alert/Alert';
 const Card = () => {
     const initialDataDogs = [
         {
+            id: 1,
             picture_url: 'https://jardinage.lemonde.fr/images/dossiers/categories3/racedecien-083123-650-325.jpg',
             name: 'Pookie',
             age: 1,
@@ -19,6 +20,7 @@ const Card = () => {
             historic_reproductions: true,
         },
         {
+            id: 2,
             picture_url: 'https://assets.mira.ca/images/_carousellarge/Credit-photo-Maude-Fortin.jpg',
             name: 'Bella',
             age: 3,
@@ -30,6 +32,7 @@ const Card = () => {
             historic_reproductions: false,
         },
         {
+            id: 3,
             picture_url: 'https://www.woopets.fr/assets/img/001/244/1200x675/choisir-chien-japonais.jpg',
             name: 'Max',
             age: 4,
@@ -41,6 +44,7 @@ const Card = () => {
             historic_reproductions: true,
         },
         {
+            id: 4,
             picture_url: 'https://cdn.shopify.com/s/files/1/0549/9774/5782/files/danois_chien-min_480x480.jpg?v=1670241109',
             name: 'Luna',
             age: 2,
@@ -52,6 +56,7 @@ const Card = () => {
             historic_reproductions: false,
         },
         {
+            id: 5,
             picture_url: 'https://www.leparisien.fr/resizer/qWvex3A2HTzkJ9elmcD72_6YpKM=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/JM6XAGGOCREQNECD4PASNKYQII.jpg',
             name: 'Charlie',
             age: 5,
@@ -63,6 +68,7 @@ const Card = () => {
             historic_reproductions: true,
         },
         {
+            id: 6,
             picture_url: 'https://images.ctfassets.net/denf86kkcx7r/3KAW3ZtZZONzfHH47xWocR/b78710225146139041fcb7b8eb9f2a7f/chiot_Cavalier_King_Charles?fm=webp&w=612',
             name: 'Daisy',
             age: 2,
@@ -103,10 +109,14 @@ const Card = () => {
             {DataDogs.map((dog, index) => (
                 <div key={index} className="card-type" style={{ backgroundImage: `url(${dog.picture_url})` }}>
                 <div className="top-card">
+                    <div className="fav_button">
+
                     <FontAwesomeIcon 
                         icon={dog.favorites ? faHeartSolid : faHeartRegular} 
                         onClick={() => toggleFavorite(index)} // Using toggleFavorite function on click
-                    />
+                        style={{color: "#FF6C00",}}
+                        />
+                    </div>
                 </div>
                     <div className="bottom-card">
                     <div className="dog-info">
