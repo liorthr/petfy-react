@@ -1,8 +1,34 @@
-.picture_component{
+.picture_component {
     background-color: #FF6C00;
-    width: 500px;
+    max-width: 500px; /* Use max-width for scalability */
+    width: 100%; /* Make width flexible */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 16px;
+    margin: auto; /* Center the component horizontally */
+    overflow: hidden; /* Prevent content from spilling out */
+}
+
+/* Adjust the size of the images and the carousel on smaller screens */
+@media (max-width: 768px) { /* For tablets and below */
+    .picture_component {
+        max-width: 400px; /* Slightly smaller on tablets */
+    }
+
+    .carousel-item img {
+        width: 100%; /* Ensure images are fully responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) { /* For mobile phones */
+    .picture_component {
+        max-width: 300px; /* Even smaller on mobile phones */
+        flex-direction: column; /* Stack items vertically if needed */
+    }
+
+    .carousel-item img {
+        max-height: 200px; /* Limit image height on small screens */
+    }
 }

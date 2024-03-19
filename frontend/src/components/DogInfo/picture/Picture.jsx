@@ -40,7 +40,7 @@ const Picture = () => {
             },
         },   
     ]
-    const dogWithId1 = pictureDogData.find(dog => dog.id === 1);
+    const dogWithId1 = pictureDogData.find(dog => dog.id === 3);
     return(
         <div className='picture_component'>
             <Carousel className="w-full max-w-xs" >

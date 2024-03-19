@@ -1,0 +1,18 @@
+.title_infos{
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.dog_name{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.dog_age{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.hobbies_badge{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}

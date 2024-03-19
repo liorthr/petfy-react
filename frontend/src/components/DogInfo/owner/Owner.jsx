@@ -43,7 +43,7 @@ const Owner = () => {
                         </div>
                     </div>
                 <div className="owner_bottom">
-                <Button variant="outline" style={{backgroundColor: '#fbc500', borderRadius: '16px'}}>Meet the owner</Button>
+                <Button  style={{backgroundColor: '#fbc500', borderRadius: '16px', color:'black'}} onClick={()=>alert('You clicked')}>Meet the owner</Button>
                 </div>
             </div>
         )}
