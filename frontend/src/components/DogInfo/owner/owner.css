@@ -1,0 +1,39 @@
+.owner_box{
+    width: 258px;
+    height: 170px;
+    background: linear-gradient(to right bottom, #FBD23F 30%, #FF6C00 70%);
+    border-radius: 16px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+.owner_top{
+    width: 100%;
+    height: 65%;
+}
+.owner_top h5,
+.owner_top h6 {
+    text-align: left;
+    margin-left: 5px; 
+    padding: 7px;
+}
+.location-info {
+    display: flex;
+    align-items: center; 
+    gap: 4px; 
+    margin-left: 7px;
+}
+
+.location-info h6 {
+    margin: 0; 
+}
+
+.owner_bottom{
+    width: 100%;
+    height: 35%;
+}
+.button_meet{
+    background-color: #fbc500;
+    border-radius: 10px;
+    height: 70%;
+}
