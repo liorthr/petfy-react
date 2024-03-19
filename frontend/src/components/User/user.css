@@ -1,0 +1,8 @@
+.user_name{
+    font-size: 35px;
+    font-weight: bold;
+}
+.user_mail, .user_tel, .user_location, .user_dogs{
+    text-align: left;
+    font-size: 20px;
+}

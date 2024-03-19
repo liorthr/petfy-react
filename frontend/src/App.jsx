@@ -7,6 +7,7 @@ import DogInfo from './components/DogInfo/DogInfo'
 import NavBar from './components/Navbar/NavBar'
 import PostPicture from './components/PostPicture/PostPicture'
 import User from './components/User/User'
+import UpdateUser from './components/User/updateUser/UpdateUser'
 
 function App() {
 
@@ -16,10 +17,15 @@ function App() {
     {/* <Card/> */}
     {/* <UserChat/> */}
     {/* <UserList/> */}
-    <DogInfo/>
-    {/* <NavBar/> */}
-    {/* <PostPicture/>
-    <User/> */}
+    <NavBar/>
+    <br />
+    <br />
+    <br />
+    
+    {/* <DogInfo/> */}
+    {/* <PostPicture/> */}
+    {/* <User/> */}
+    <UpdateUser/>
     </>
   )
 }
