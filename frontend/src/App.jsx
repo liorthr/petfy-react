@@ -13,10 +13,10 @@ function App() {
   return (
     <>
     {/* <Auth/> */}
-    <Card/>
+    {/* <Card/> */}
     {/* <UserChat/> */}
     {/* <UserList/> */}
-    {/* <DogInfo/> */}
+    <DogInfo/>
     {/* <NavBar/> */}
     {/* <PostPicture/>
     <User/> */}

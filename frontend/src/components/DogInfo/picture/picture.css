@@ -1,0 +1,8 @@
+.picture_component{
+    background-color: #FF6C00;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+}
