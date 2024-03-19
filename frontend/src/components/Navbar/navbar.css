@@ -21,8 +21,13 @@
     color: #ffffff; 
 }
 
-.navbar-icons a:hover svg { /* Cibler les éléments SVG des icônes FontAwesome spécifiquement */
-    color: #FFD43B;
+.navbar-icons a svg {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+.navbar-icons a:hover svg {
+    color: #FFD43B; /* Change to your desired hover color */
+    transform: scale(1.1); /* Slightly increase size on hover */
 }
 
 .navbar-icons a:last-child {

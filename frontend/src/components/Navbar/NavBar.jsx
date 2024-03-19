@@ -19,18 +19,17 @@ const NavBar = () => {
             <img src={Logo} alt="Logo" />
         </div>
         <div className={`navbar-icons ${isMenuOpen ? 'show' : ''}`}>
-            {/* Conditionally render this div based on isMenuOpen */}
-            <a href="https://link-to-first-destination.com">
-                <FontAwesomeIcon icon={faUser} style={{ color: "#ffffff", }} size='xl' className='navbar_icon' />
+             <a href="https://link-to-fourth-destination.com">
+                <FontAwesomeIcon icon={faHeart}  size='xl' className='navbar_icon' />
             </a>
             <a href="https://link-to-second-destination.com">
-                <FontAwesomeIcon icon={faComment} style={{ color: "#ffffff", }} size='xl' className='navbar_icon' />
+                <FontAwesomeIcon icon={faComment}  size='xl' className='navbar_icon' />
             </a>
             <a href="https://link-to-third-destination.com">
-                <FontAwesomeIcon icon={faSquarePlus} style={{ color: "#ffffff", }} size='xl' className='navbar_icon' />
+                <FontAwesomeIcon icon={faSquarePlus}  size='xl' className='navbar_icon' />
             </a>
-            <a href="https://link-to-fourth-destination.com">
-                <FontAwesomeIcon icon={faHeart} style={{ color: "#ffffff", }} size='xl' className='navbar_icon' />
+            <a href="https://link-to-first-destination.com">
+                <FontAwesomeIcon icon={faUser}  size='xl' className='navbar_icon' />
             </a>
         </div>
         <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleMenu} style={{ color: "#ffffff", }} size='xl' />

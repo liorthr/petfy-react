@@ -25,7 +25,7 @@ function App() {
     {/* <DogInfo/> */}
     {/* <PostPicture/> */}
     {/* <User/> */}
-    <UpdateUser/>
+    {/* <UpdateUser/> */}
     </>
   )
 }
