@@ -1,28 +1,47 @@
 .doginfo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: auto auto; 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: auto; 
 }
 
-.top-section {
-    display: flex;
+/* For mobile, stack components vertically */
+.picture-section, .owner-section, .bottom-section {
     width: 100%;
-    justify-content: space-between;
+}
+.owner-section{
+    margin-top: 10px;
+    
 }
 
-.picture-section {
-    flex: 1;
-    margin-bottom: 20px;
-    /* Adjust the alignment or add padding/margin as needed */
+@media (min-width: 768px) { 
+    .doginfo-container {
+        grid-template-rows: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-areas: 
+            "picture owner"
+            "allinfos allinfos"; 
+    }
+
+    .top-section {
+        display: contents; 
+    }
+
+    .picture-section {
+        grid-area: picture; 
+    }
+
+    .owner-section {
+        grid-area: owner; 
+    }
+
+    .bottom-section {
+        grid-area: allinfos; 
+    }
 }
 
-.owner-section {
-    flex: 1;
-    margin-left: 20%;
-    /* Adjust the alignment or add padding/margin as needed */
-}
 
-.bottom-section {
-    width: 100%;
-    /* Adjust the alignment or add padding/margin as needed */
-}
+
