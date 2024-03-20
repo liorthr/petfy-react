@@ -1,14 +1,19 @@
 import './postpicture.css'
+import PictureData from './PictureData/PictureData';
+import { Button } from "@/components/ui/button"
+
+
 const PostPicture = () => {
     return(
         <>
-        Back: 
+        {/* Back: 
         1.connect to an user 
         PostPicture:
-        1. Add picture on Firebase with 'choose file' and 'Upload'
-        2. use Textarea-Input for All infos 
-        3. use send button to send 
-        4. use checkbox for boolean 
+        1. Add picture on Firebase with 'choose file' and 'Upload' */}
+        
+        <PictureData/>
+        <br />
+        <Button onClick={()=>alert('You send post')}>Post</Button>
         </>
     )
 }

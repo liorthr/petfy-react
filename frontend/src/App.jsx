@@ -8,7 +8,7 @@ import NavBar from './components/Navbar/NavBar'
 import PostPicture from './components/PostPicture/PostPicture'
 import User from './components/User/User'
 import UpdateUser from './components/User/updateUser/UpdateUser'
-
+import { PostDog2 } from './components/PostDog2/PostDog2'
 function App() {
 
   return (
@@ -17,14 +17,15 @@ function App() {
     {/* <br />
     <br />
     <br /> */}
-    <Auth/>
+    {/* <Auth/> v */}
     {/* <Card/> v*/} 
     {/* <UserChat/> */}
-    {/* <UserList/> */}
+    <UserList/>
     {/* <DogInfo/> v*/} 
-    {/* <PostPicture/> */} 
+    {/* <PostPicture/>  */}
     {/* <User/> v*/}
     {/* <UpdateUser/> v*/} 
+    {/* <PostDog2/> xxxxxx*/}
     </>
   )
 }

@@ -1,0 +1,7 @@
+.data_name, .data_age, .data_age, .data_description, .data_health, .data_race{
+    margin-bottom: 10px;
+}
+
+.picture_data{
+    background-color: aqua;
+}
