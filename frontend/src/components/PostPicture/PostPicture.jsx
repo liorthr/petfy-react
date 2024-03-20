@@ -2,6 +2,8 @@ import './postpicture.css'
 const PostPicture = () => {
     return(
         <>
+        Back: 
+        1.connect to an user 
         PostPicture:
         1. Add picture on Firebase with 'choose file' and 'Upload'
         2. use Textarea-Input for All infos 

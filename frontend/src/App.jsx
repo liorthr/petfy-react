@@ -13,19 +13,18 @@ function App() {
 
   return (
     <>
-    {/* <Auth/> */}
-    {/* <Card/> */}
+    {/* <NavBar/> v */}
+    {/* <br />
+    <br />
+    <br /> */}
+    <Auth/>
+    {/* <Card/> v*/} 
     {/* <UserChat/> */}
     {/* <UserList/> */}
-    <NavBar/>
-    <br />
-    <br />
-    <br />
-    
-    {/* <DogInfo/> */}
-    {/* <PostPicture/> */}
-    {/* <User/> */}
-    {/* <UpdateUser/> */}
+    {/* <DogInfo/> v*/} 
+    {/* <PostPicture/> */} 
+    {/* <User/> v*/}
+    {/* <UpdateUser/> v*/} 
     </>
   )
 }
