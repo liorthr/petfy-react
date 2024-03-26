@@ -26,6 +26,12 @@ router.get('/dogs/favorites', _getFavoriteDogs);
 router.post('/user/addNewUser', _createUser);
 router.post('/dogs/addNewDog', _createDog);
 
+//UPDATE
+
+//AUTH
+
+//CHAT
+
 
 
 
