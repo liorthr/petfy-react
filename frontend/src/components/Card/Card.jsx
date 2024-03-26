@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons'; // Solid heart
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import { AlertDemo } from '../Alert/Alert';
+import DogInfo from '../DogInfo/DogInfo';
 
 const Card = () => {
     const initialDataDogs = [
@@ -105,6 +106,10 @@ const Card = () => {
      
     return(
         <>
+        <br />
+        <br />
+        <br />
+        <br />
          <div className='list_of_cards'>
             {DataDogs.map((dog, index) => (
                 <div key={index} className="card-type" style={{ backgroundImage: `url(${dog.picture_url})` }}>

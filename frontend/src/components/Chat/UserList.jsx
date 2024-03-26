@@ -1,5 +1,6 @@
 import './userlist.css';
 
+
 const UserList = () => {
     const usersChat = [
         {
@@ -19,7 +20,7 @@ const UserList = () => {
             user_dog_name: 'Toda',
         },
     ];
-
+    
     return (
         <div className="user_list">
             {usersChat.map((user, index) => (

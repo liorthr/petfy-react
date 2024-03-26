@@ -16,7 +16,8 @@ const PictureData = () => {
             <Input type='number' placeholder='Enter the dog age'/>
         </div>
         <div className="data_race">
-            <Input type='text'placeholder='Enter the breed of dog'/>
+            {/* <Input type='text'placeholder='Enter the breed of dog'/> */}
+            change for dropdown
         </div>
         <div className="data_description">
             <Textarea placeholder='Tell us about your dog: his life, what he likes to do, where he has already traveled, where he comes from'/>

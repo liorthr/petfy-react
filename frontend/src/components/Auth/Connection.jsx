@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'; 
 import {
   Card,
   CardContent,
@@ -15,8 +17,21 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs";
+// import {auth} from '../../../../backend/config/firebase.js'
+// import {getAuth, signInWithPopup, GoogleAuthProvider} from 'firebase/auth'
 
 const Connexion = () => {
+  // const handleGoogle = async (e) => {
+  //   e.preventDefault(); 
+  //   const provider = new GoogleAuthProvider();
+  //   try {
+  //     const result = await signInWithPopup(auth, provider);
+  //   } catch (error) {
+  //     console.error("Authentication error:", error);
+  //   }
+  // };
+  
+
   return (
     <Tabs defaultValue="account" className="max-w-full w-auto md:w-[400px] mx-auto">
       <TabsList className="grid w-full grid-cols-2">
@@ -65,6 +80,10 @@ const Connexion = () => {
           </CardFooter>
         </Card>
       </TabsContent>
+      <br />
+    {/* <Button className="mr-2" size="lg" boxShadow="lg" onClick={handleGoogle}>
+        <FontAwesomeIcon icon={faGoogle} style={{color: "#ff6c02",marginRight: '4px'}} />  Login with Google
+    </Button> */}
     </Tabs>
   );
 };

@@ -16,24 +16,22 @@
     height: 50px; 
 }
 
-.navbar-icons a {
+.navbar-icons svg {
     margin-right: 40px;
-    color: #ffffff; 
+    color: #ffffff;
+    cursor: pointer; /* Indicate clickable elements */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.navbar-icons a svg {
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+.navbar-icons svg:hover {
+    color: #FFD43B;
+    transform: scale(1.1);
 }
 
-.navbar-icons a:hover svg {
-    color: #FFD43B; /* Change to your desired hover color */
-    transform: scale(1.1); /* Slightly increase size on hover */
+/* Adjust the last icon's margin */
+.navbar-icons svg:last-child {
+    margin-right: 30px; /* Make sure to include a unit, like 'px' */
 }
-
-.navbar-icons a:last-child {
-    margin-right: 30;
-}
-
 /* Existing styles... */
 
 .menu-icon {
@@ -63,7 +61,7 @@
         margin-right: 30px;
     }
 
-    .navbar-icons a {
+    .navbar-icons svg {
         margin-right: 20; 
         margin-top: 10px; 
     }
