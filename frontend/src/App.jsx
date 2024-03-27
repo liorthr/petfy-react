@@ -37,6 +37,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/Navbar/NavBar'; // Adjust the import path as needed
 import Home from './components/Home/Home';
+import Favorites from './components/Favorites/Favorites';
 import Chat from './components/Chat/UserChat';
 import PostPicture from './components/PostPicture/PostPicture';
 import User from './components/User/User';
@@ -45,7 +46,7 @@ function App() {
     <BrowserRouter>
       <NavBar /> {/* NavBar is now within BrowserRouter */}
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/post-picture" element={<PostPicture />} />
         <Route path="/user" element={<User />} />

@@ -1,7 +1,6 @@
-// models/User.js
-
-import db from '../config/firebase.js';
-import { collection, getDocs, getDoc, doc, query, where, addDoc } from 'firebase/firestore';
+import firebase from '../config/firebase.js'; // Adjust the path as necessary
+const { db } = firebase;
+import { collection, getDocs, getDoc, doc, query, where, addDoc, updateDoc } from 'firebase/firestore';
 
 //get all users
 export const getUsers = async () => {
@@ -19,14 +18,6 @@ export const getUserById = async (userId) => {
     } else {
       throw new Error('User not found');
     }
-  };
-
-//getFavoritesUsersByCondition
-export const getAllUsersFavorites = async () => {
-    const usersCol = collection(db, 'users');
-    const q = query(usersCol, where('favorites', '==', true)); // Query for documents where 'favorites' is true
-    const querySnapshot = await getDocs(q);
-    return querySnapshot.docs.map(doc => doc.data());
   };
 
 //getAllDogs
@@ -68,3 +59,18 @@ export const addDog = async (dogData) => {
     });
     return docRef.id;
   };
+
+//updateUserData
+export const updateUser = async (userId, userData) => {
+  const userRef = doc(db, 'users', userId);
+  await updateDoc(userRef, userData);
+};
+
+//updateDogData
+export const updateDog = async (dogId, dogData) => {
+  const dogRef = doc(db, 'dogs', dogId);
+  await updateDoc(dogRef, dogData);
+};
+
+//updateFavoritesDogs
+

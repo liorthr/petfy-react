@@ -60,7 +60,7 @@ const NavBar = () => {
         <img src={Logo} alt="Logo" />
       </div>
       <div className={`navbar-icons ${isMenuOpen ? 'show' : ''}`}>
-        <FontAwesomeIcon icon={faHeart} size='xl' className='navbar_icon' onClick={() => navigate('/home')} />
+        <FontAwesomeIcon icon={faHeart} size='xl' className='navbar_icon' onClick={() => navigate('/favorites')} />
         <FontAwesomeIcon icon={faComment} size='xl' className='navbar_icon' onClick={() => navigate('/chat')} />
         <FontAwesomeIcon icon={faSquarePlus} size='xl' className='navbar_icon' onClick={() => navigate('/post-picture')} />
         <FontAwesomeIcon icon={faUser} size='xl' className='navbar_icon' onClick={() => navigate('/user')} />

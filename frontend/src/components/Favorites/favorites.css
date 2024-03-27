@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.list_of_cards { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.card-type { 
+    width: 250px;
+    height: 300px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden; 
+    box-shadow: 3px 3px 0px 0px #ff6a00aa;
+}
+
+.top-card { 
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px;
+}
+
+.fav_button{
+    width: 25px;
+    height: 23px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+
+
+
+.bottom-card { 
+    margin-top: 160px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.dog-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; 
+}
+
+.name-age, .race {
+    text-align: center;
+    margin: 0 5px; 
+}
+
+.card_button {
+    border-radius: 15px;
+    font-size: smaller;
+    background: linear-gradient(to right, #FF6C00, #ff8c33);
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: auto; 
+    text-decoration: none;
+}
+.card_button:hover{
+    background-color: black;
+}

@@ -1,0 +1,48 @@
+                                                 TO DO LIST
+
+AUTH
+-post register
+-post login
+-post login with Google
+
+CHAT
+-
+
+POST 
+-post new user
+-post new dog
+
+GET ALL/ GET FAVORITES
+-get all users
+-get one user by id
+-get all dogs
+-get all dogs with breed
+-get all dogs with favorites
+
+USER / UPDATE USER
+-put update user data
+-put update dog data
+
+
+
+                                        DATABASE
+    USER 
+user_id: 
+user_name: string 
+user_mail: string
+user_phone: number
+user_location: geopoint
+user_dogs: array of dogs_id
+
+    DOG 
+dog_owner: reference
+dog_id:
+dog_pictures: array of string 
+dog_name: string
+dog_age: number
+dog_breed: string
+dog_description: string
+dog_health: string
+dog_favorites: boolean
+dog_hobbies: array of string
+dog_reproduction: boolean

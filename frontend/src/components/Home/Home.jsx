@@ -3,7 +3,9 @@ import Card from "../Card/Card";
 const Home = () => {
     return (
         <>
-        Home
+        <br />
+        <br />
+        <br /><br /><br />
         <Card/>
         </>
     )

@@ -3,13 +3,18 @@
 import { 
     getUsers,
      getUserById, 
-     getAllUsersFavorites, 
      getAllDogs, 
      getAllDogsWhereBreedIs, 
      getAllDogsFavorites, 
      addUser,
      addDog,
+     updateUser,
+     updateDog,
+
      } from '../models/users.models.js';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import auth from '../config/firebase.js'
+
 
 //getAllUsers
 export const _getAllUsers = async (req, res) => {
@@ -35,17 +40,6 @@ export const _getUser = async (req, res) => {
     } catch (error) {
       console.error('Error fetching user:', error);
       res.status(500).send('Error fetching user');
-    }
-  };
-
-  //getAllFavoritesUsers
-  export const _getUsersWithFavorites = async (req, res) => {
-    try {
-      const userList = await getAllUsersFavorites();
-      res.status(200).json(userList);
-    } catch (error) {
-      console.error('Error fetching users with favorites:', error);
-      res.status(500).send('Error fetching users with favorites');
     }
   };
 
@@ -115,3 +109,78 @@ export const _createDog = async (req, res) => {
       res.status(500).json({ message: 'Error adding dog', error: error.message });
     }
   };
+
+//login
+export const _login = (req, res) => {
+  const auth = getAuth();
+  const { email, password } = req.body;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // User logged in
+      res.status(200).json({ message: "User logged in successfully", userId: userCredential.user.uid });
+    })
+    .catch((error) => {
+      console.error('Login error:', error);
+      res.status(500).json({ message: "User login failed", error: error.message });
+    });
+};
+
+//register
+export const _register = (req, res) => {
+  const auth = getAuth();
+  const { email, password } = req.body;
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // User registered
+      res.status(201).json({ message: "User registered successfully", userId: userCredential.user.uid });
+    })
+    .catch((error) => {
+      console.error('Registration error:', error);
+      res.status(500).json({ message: "User registration failed", error: error.message });
+    });
+};
+
+//GoogleAuth
+export const _verifyGoogleToken = async (req, res) => {
+  const idToken = req.body.token;
+  
+  try {
+    const decodedToken = await auth.verifyIdToken(idToken);
+    const uid = decodedToken.uid;
+    // Optionally: Retrieve or create a user in your own database
+    res.status(200).json({ uid: uid, message: 'User authenticated successfully' });
+  } catch (error) {
+    console.error('Error verifying Google token:', error);
+    res.status(401).json({ message: 'User not authenticated', error: error.message });
+  }
+};//need to test
+
+//updateUserData
+export const _updateUserDetails = async (req, res) => {
+  const userId = req.params.id;  // Assuming the user ID is passed as a URL parameter
+  const userData = req.body;
+
+  try {
+    await updateUser(userId, userData);
+    res.status(200).json({ message: 'User updated successfully' });
+  } catch (error) {
+    console.error('Error updating user:', error);
+    res.status(500).json({ message: 'Error updating user', error: error.message });
+  }
+};
+
+//updateDogData
+export const _updateDogDetails = async (req, res) => {
+  const dogId = req.params.id;  // Assuming the dog ID is passed as a URL parameter
+  const dogData = req.body;
+
+  try {
+    await updateDog(dogId, dogData);
+    res.status(200).json({ message: 'Dog updated successfully' });
+  } catch (error) {
+    console.error('Error updating dog:', error);
+    res.status(500).json({ message: 'Error updating dog', error: error.message });
+  }
+};
