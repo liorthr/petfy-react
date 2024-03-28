@@ -41,6 +41,8 @@ import Favorites from './components/Favorites/Favorites';
 import Chat from './components/Chat/UserChat';
 import PostPicture from './components/PostPicture/PostPicture';
 import User from './components/User/User';
+import DogInfo from './components/DogInfo/DogInfo';
+import UpdateUser from './components/User/updateUser/UpdateUser'
 function App() {
   return (
     <BrowserRouter>
@@ -50,6 +52,9 @@ function App() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/post-picture" element={<PostPicture />} />
         <Route path="/user" element={<User />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/dog-info" element={<DogInfo />} />
+        <Route path="/update-user" element={<UpdateUser/>} />
       </Routes>
     </BrowserRouter>
   );

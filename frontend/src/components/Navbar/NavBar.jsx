@@ -56,7 +56,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
+      <div className="navbar-logo" onClick={()=>navigate('/home')}>
         <img src={Logo} alt="Logo" />
       </div>
       <div className={`navbar-icons ${isMenuOpen ? 'show' : ''}`}>

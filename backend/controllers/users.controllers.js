@@ -4,6 +4,7 @@ import {
     getUsers,
      getUserById, 
      getAllDogs, 
+     getDogById,
      getAllDogsWhereBreedIs, 
      getAllDogsFavorites, 
      addUser,
@@ -53,6 +54,19 @@ export const _getUser = async (req, res) => {
       res.status(500).send('Error fetching dogs');
     }
   }; 
+
+//getDogByID
+export const _getDogById = async (req, res) => {
+  try {
+    const dogId = req.params.id; // Get the dog ID from the URL parameters
+    const dog = await getDogById(dogId);
+    res.status(200).json(dog);
+  } catch (error) {
+    console.error('Error fetching dog:', error);
+    res.status(500).send('Error fetching dog');
+  }
+};
+
 
 //getAllDogsWithBreed
 export const _getDogsByBreed = async (req, res) => {

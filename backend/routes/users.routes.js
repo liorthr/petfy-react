@@ -3,6 +3,7 @@ import {
     _getAllUsers,
     _getUser, 
     _getDogs, 
+    _getDogById,
     _getDogsByBreed,
     _getFavoriteDogs, 
     _createUser,
@@ -21,6 +22,7 @@ const router = express.Router();
 router.get('/users', _getAllUsers);
 router.get('/users/id/:id', _getUser); 
 router.get('/dogs', _getDogs);
+router.get('/dogs/:id', _getDogById);
 router.get('/dogs/breed/:breed', _getDogsByBreed);
 router.get('/dogs/favorites', _getFavoriteDogs);
 

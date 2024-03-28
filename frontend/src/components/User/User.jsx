@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone,faPaw,faLocationDot,faPencil } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '../ui/button';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -49,6 +50,7 @@ const User = () => {
 
     // Destructuring the userSelected object
     const { user_name, user_mail, user_tel, user_location, user_dog } = userSelected;
+    const navigate = useNavigate()
 
     return (
         <div className="user_infos">
@@ -60,8 +62,7 @@ const User = () => {
             <div className="user_dogs">
                 <FontAwesomeIcon icon={faPaw} style={{color:'#FF6C00'}} /> Dogs: {user_dog.dog_id.map((id) => <p key={id}>{id}</p>)}
             </div>
-            <Button onClick={()=>alert('hey you going to change data')}><FontAwesomeIcon icon={faPencil} /></Button>
-            {/* navigate to UpdateUser.jsx to update data */}
+            <Button onClick={()=>navigate('/update-user')}><FontAwesomeIcon icon={faPencil} /></Button>
         </div>
     );
 }

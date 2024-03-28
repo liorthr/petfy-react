@@ -27,6 +27,19 @@ export const getAllDogs = async () => {
     return dogSnapshot.docs.map(doc => doc.data());
   };
 
+//getDogByID
+export const getDogById = async (dogId) => {
+  const dogRef = doc(db, 'dogs', dogId);
+  const dogSnap = await getDoc(dogRef);
+
+  if (dogSnap.exists()) {
+    return { id: dogSnap.id, ...dogSnap.data() };
+  } else {
+    // Handle the case where the document does not exist
+    throw new Error('No such document!');
+  }
+};
+
 //getAllDogsWhereBreedIs
 export const getAllDogsWhereBreedIs = async (breed) => {
     const dogsCol = collection(db, 'dogs');
