@@ -92,26 +92,47 @@ export const _getFavoriteDogs = async (req, res) => {
   };
 
 //addNewUser
-export const _createUser = async (req, res) => {
-    try {
-      const userData = {
-        user_name: req.body.user_name,
-        user_mail: req.body.user_mail,
-        user_phone: req.body.user_phone,
-        user_location: {  
-          latitude: req.body.user_location.latitude,
-          longitude: req.body.user_location.longitude
-        },
-        user_dog: req.body.user_dog  
-      };
+// export const _createUser = async (req, res) => {
+//     try {
+//       const userData = {
+//         user_name: req.body.user_name,
+//         user_mail: req.body.user_mail,
+//         user_phone: req.body.user_phone,
+//         user_location: {  
+//           latitude: req.body.user_location.latitude,
+//           longitude: req.body.user_location.longitude
+//         },
+//         user_dog: req.body.user_dog  
+//       };
       
-      const newUserId = await addUser(userData);
-      res.status(201).send({ id: newUserId, message: 'User added successfully' });
-    } catch (error) {
-      console.error('Error adding user:', error);
-      res.status(500).send('Error adding user');
-    }
-  };
+//       const newUserId = await addUser(userData);
+//       res.status(201).send({ id: newUserId, message: 'User added successfully' });
+//     } catch (error) {
+//       console.error('Error adding user:', error);
+//       res.status(500).send('Error adding user');
+//     }
+//   };
+export const _createUser = async (req, res) => {
+  try {
+    const userData = {
+      user_name: req.body.user_name,
+      user_mail: req.body.user_mail,
+      user_phone: req.body.user_phone,
+      user_location: {  
+        latitude: req.body.user_location.latitude,
+        longitude: req.body.user_location.longitude
+      },
+      user_dog: req.body.user_dog  
+    };
+
+    const newUserId = await addUser(userData);
+    res.status(201).send({ id: newUserId, message: 'User added successfully' });
+  } catch (error) {
+    console.error('Error adding user:', error);
+    res.status(500).send('Error adding user');
+  }
+};
+
 
 //addNewDog
 export const _createDog = async (req, res) => {

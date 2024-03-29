@@ -57,21 +57,39 @@ export const getAllDogsFavorites = async () => {
   };
 
 //addNewUser
+// export const addUser = async (userData) => {
+//     const usersCol = collection(db, 'users');
+//     const docRef = await addDoc(usersCol, userData);
+//     return docRef.id;  // Returns the new document's ID
+//   };
 export const addUser = async (userData) => {
-    const usersCol = collection(db, 'users');
-    const docRef = await addDoc(usersCol, userData);
-    return docRef.id;  // Returns the new document's ID
-  };
+  const userId = generateUserId();
+  userData.user_id = userId;
+  const usersCol = collection(db, 'users');
+  const docRef = await addDoc(usersCol, userData);
+  return docRef.id;  
+};
+
+const generateUserId = () => {
+  return Date.now().toString();
+};
+
 
 //addNewDog
 export const addDog = async (dogData) => {
-    const dogsCol = collection(db, 'dogs');
-    const docRef = await addDoc(dogsCol, {
-      ...dogData,
-      dog_owner: doc(db, 'users', dogData.dog_owner)  // Reference to user document
-    });
-    return docRef.id;
-  };
+  const dogId = generateDogId();
+  dogData.dog_id = dogId;
+  const dogsCol = collection(db, 'dogs');
+  const docRef = await addDoc(dogsCol, {
+    ...dogData,
+    dog_owner: doc(db, 'users', dogData.dog_owner)  // Reference to user document
+  });
+  return docRef.id;
+};
+
+const generateDogId = () => {
+  return 'dog_' + Date.now().toString();
+};
 
 //updateUserData
 export const updateUser = async (userId, userData) => {
